@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horse Riding</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <ul id="menu">
+                <li> <a class = "Header" href="Index.html"> <strong>Начало </a> </li>
+                <li> <a class = "Header" href="Prices.html"> <strong></strong>Цени </a> </li>
+
+            </ul>
+			    <img ID = "Header-Image" src="Photos/Sky.png">
+        </header>
+
+        <img ID = "Top" src="Photos/Top.png">
+            <h1 id="name-text">Конна База "Хан Аспарух”</h1>
+            
+            <h2 id="moto"> Moto Text</h2>
+
+            <h3 id = "main-text">Искате да разнообразите ежедневието си или да отдъхнете след дълга и уморителна седмица → Конна База “Хан Аспарух” е 
+                мястото за Вас! Ако желаете да опитате или да продължите развитието си в конната езда, заповядайте при нас - ККС “Тенев и Син”.
+            <br>
+            <br>
+                Предлагаме професионални и аматьорски уроци по езда, както за децата, така и за възрастни. Клубът “Тенев и Син” е с дългогодишен опит в конния спорт и с доказани успехи (национални и интернационални). Разполагаме със сертефицирани инструктори, понита и спортни коне. Уроци предлагаме за всички нива → от начинаещи до напреднали.
+
+            </h3>
+
+            <h4 id="end-text">
+            Телефон: +359 88 3340 474 &nbsp;-&nbsp;
+            Цветелина Тенева &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Адрес: Конна База “Хан Аспарух” &nbsp;-&nbsp;
+            София, ж.к Славия, ул. Хайдушко изворче №28
+
+            </h4>
+            <div ID = "bar1"> <!--top bar-->
+            </div>
+            <div ID = "bar2"> <!--bottom bar-->
+            </div>
+            <div ID = "bar3">
+            </div>
+            <div ID = "body-part">
+            </div>
+
+            <img scr="Photos/">
+
+
+
+            <!--slideshow-->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 12</div>
+                <img src="Photos/1.png" style="width:100%">                
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 12</div>
+                <img src="Photos/2.png" style="width:100%">               
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 12</div>
+                <img src="Photos/3.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">4 / 12</div>
+                <img src="Photos/4.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">5 / 12</div>
+                <img src="Photos/5.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">6 / 12</div>
+                <img src="Photos/6.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">7 / 12</div>
+                <img src="Photos/7.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">8 / 12</div>
+                <img src="Photos/8.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">9 / 12</div>
+                <img src="Photos/9.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">10 / 12</div>
+                <img src="Photos/10.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">11 / 12</div>
+                <img src="Photos/11.png" style="width:100%">                
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">12 / 12</div>
+                <img src="Photos/12.png" style="width:100%">                
+                </div>
+
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div id="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
+            </div>
+
+                
+    </body>
+
+    <script>
+var slideIndex = 1;
+showSlides2(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides2(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides2(slideIndex = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
