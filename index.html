@@ -10,16 +10,15 @@
         <header>
             <ul id="menu">
                 <li> <a class = "header" href="index.html"> <strong>Начало </a> </li>
-                <li> <a class = "header" href="prices.html"> <strong></strong>Цени </a> </li>
-
             </ul>
 			    <img ID = "clouds-image" src="Photos/Sky.png">
         </header>
 
-        <img ID = "main-image" src="Photos/Top.png">
+            <img ID = "main-image1" src="Photos/Top2.png">
+            <img ID = "main-image2" src="Photos/Top3.png">
             <h1 id="name-text">Конна База "Хан Аспарух”</h1>
             
-            <h2 id="moto"> Riding Center NIESA</h2>
+            <h2 id="moto">ККС “Тенев и син”</h2>
 
             <h3 id = "main-text">Искате да разнообразите ежедневието си или да отдъхнете след дълга и уморителна седмица → Конна База “Хан Аспарух” е 
                 мястото за Вас! Ако желаете да опитате или да продължите развитието си в конната езда, заповядайте при нас - ККС “Тенев и Син”.
@@ -33,7 +32,7 @@
             Телефон: +359 88 3340 474 &nbsp;-&nbsp;
             Цветелина Тенева &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Адрес: Конна База “Хан Аспарух” &nbsp;-&nbsp;
-            София, ж.к Славия, ул. Хайдушко изворче №28
+            София, ж.к Славия, ул. Хайдушко изворче №28 →
 
             </h4>
             <div ID = "bar1"> <!--top bar-->
@@ -137,37 +136,86 @@
                 <span class="dot" onclick="currentSlide(12)"></span>
             </div>
 
-                
+
+            <!-- Trigger the Modal -->
+            <img id="myImg" src="Photos/Maps.png"  style="width:100%;max-width:200px">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+            </div>
+            <div id="prices-box"></div>
+            <h3 class ="prices" style="top:1630px;font-size: xx-large;"> <u>Цени</u>: </h3>
+            <h3 class="prices">
+                &nbsp;
+                Разходка с пони - 20 минути 20лв
+                <br>
+                Еднократен урок - 30 минути 40лв 
+                <br>
+                Пакет 10 урока - карта 350лв
+            </h3>
+        
     </body>
 
-    <script>
-var slideIndex = 1;
-showSlides2(slideIndex);
+<script>
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides2(slideIndex += n);
+    var slideIndex = 1;
+    showSlides2(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides2(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides2(slideIndex = n);
+    }
+
+    function showSlides2(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+
+
+
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides2(slideIndex = n);
-}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-function showSlides2(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
 }
-
-    </script>
+</script>
