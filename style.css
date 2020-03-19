@@ -1,15 +1,36 @@
-html *
-{
+html *{
    font-family: Arial !important;
    
 }
-
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 body{
 	background-color: rgb(250, 250, 250);
 	background-image: url("Photos/Background.png");
 	background-position: 0% -1000%;
 	z-index: 5;
 }
+h1{
+	font-family:ariel;
+	color:white;
+}
+h2{
+	font-family:serif;
+	color:white;
+}
+h3{
+	float:righ;
+	color: rgb(60, 60, 60);
+}
+
+
+.header{
+	text-decoration:none;
+	color:white;
+}
+
 #menu{
 	width:50%;
 	margin:10x;
@@ -21,13 +42,20 @@ body{
 	z-index:2;
 	font-size: 20px;
 	}
-	
-.Header{
-	text-decoration:none;
-	color:white;
+	#menu li{
+		display:inline-block;
+		padding-right: 25px;
+		padding-left: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 	
-#Header-Image{
+	#menu li:hover{
+	background-color:#ffffff27;
+	
+	}
+	
+#clouds-image{
 		width:110%;
 		position: absolute;
 		top: 70%;
@@ -36,41 +64,13 @@ body{
 		z-index:-1;
 		opacity: 80%;
 		}
-#Top{
+#main-image{
 		z-index:-2;
 		width:105%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%);
-}
-	
-#menu li{
-		display:inline-block;
-		padding-right: 25px;
-		padding-left: 25px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-}
-	
-#menu li:hover{
-	background-color:#ffffff27;
-	
-}
-			
-h3{
-	float:righ;
-	color: rgb(60, 60, 60);
-}
-	
-h2{
-	font-family:serif;
-	color:white;
-}
-
-h1{
-	font-family:ariel;
-	color:white;
 }
 
 img{ 
@@ -79,9 +79,13 @@ img{
 	padding-right:14px;
 }
 
-html, body {
-		max-width: 100%;
-		overflow-x: hidden;
+#moto{
+	position: absolute;
+	top: 677px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	color: rgb(100, 100, 100);
 }
 
 #bar1 {
@@ -92,6 +96,7 @@ html, body {
 	top:-1px;
 	z-index: 1;
 }
+
 #bar2 {
 	position: absolute;	
 	margin: 0 -9999rem;
@@ -99,6 +104,7 @@ html, body {
 	background: #9ccfdb;
 	top:1800px;
 }
+
 #end-text{
 	position: absolute;
 	top: 1840px;
@@ -115,24 +121,18 @@ html, body {
 	border-bottom: 1px solid grey;
 	top:675px;
 }
-#moto{
-	position: absolute;
-	top: 665px;
-	left: 45%;
-	z-index: 5;
-	color: rgb(100, 100, 100);
-}
 
-#body-part{
+#body-block{
 	position: absolute;
-	left: 245px; /* this is to change for left and right*/
+	left: 50%;
+	transform: translate(-50%, -50%);; /* this is to change for left and right*/
 	width: 70%;	
 	height: 1400px; 	
   	padding: 50px;
   	margin: -10px;
 	background-color: rgb(255, 255, 255);
 	z-index: -3;
-	top: 495px;
+	top: 170%;
 }
 
 #main-text{
@@ -150,12 +150,9 @@ html, body {
 	z-index: 2;
 	font-size: 1.75em;
 }
-#image-text{
-	position: absolute;
-	width: 1500px;
-	top: 500px;
-	z-index: -4;
-}
+
+
+
 
 
 
@@ -167,8 +164,9 @@ html, body {
 .slideshow-container {
   max-width: 600px;
   position: absolute;
-  top: 1100px;
-  left: 465px;
+  top: 1320px;
+  left: 50%;
+	transform: translate(-50%, -50%);
 
 }
 
@@ -253,8 +251,9 @@ html, body {
 }
 #dots{
 	position: absolute;
-	top: 1550px;
-	left: 600px;
+	top: 1560px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 5;
 }
 
